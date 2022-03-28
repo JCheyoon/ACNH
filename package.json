@@ -1,0 +1,23 @@
+{
+  "name": "acnh",
+  "version": "1.0.0",
+  "description": "cheyun's acnh project",
+  "main": "main.js",
+  "scripts": {
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JCheyoon/ACNH.git"
+  },
+  "author": "jung cheyoon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JCheyoon/ACNH/issues"
+  },
+  "homepage": "https://github.com/JCheyoon/ACNH#readme",
+  "dependencies": {
+    "prettier": "^2.6.0"
+  }
+}

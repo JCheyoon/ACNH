@@ -1,38 +1,197 @@
-
-/*google icon*/
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
-  src: local('Material Icons'),
-  local('MaterialIcons-Regular'),
-  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
-  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
-  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+/*Global*/
+:root {
+  /*Color*/
+  --color-white: #ffffff;
+  --color-dark-white: #fafafa;
+  --color-blue: #92d1e5;
+  --color-dark-blue: #79bacf;
+  --color-light-blue: #c8eefa;
+  --color-light-grey: #e1e1e1;
+  --color-grey: #757575;
+  --color-yellow: #e4e8c5;
+  --color-light-beige: #faf1e4;
+  --color-begie: #e8e0c3;
+  --color-dark-beige: #b8ac8a;
+  --color-green: #0aa885;
+  --color-dark-green: #0b8560;
+  --color-light-black: #34323f;
+  --color-black: #000000;
+  /*Font size*/
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+  /*Font weight*/
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+  /*size*/
+  --size-border-radius: 4px;
+  /*Animation duration*/
+  --animation-duration: 300ms;
+}
+/*Universal tag*/
+* {
+  box-sizing: border-box;
+}
+body {
+  padding-left: 300px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  cursor: default;
+}
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-.material-icons{
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
+li {
+  margin: 10px 0;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
 
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
+/* Typography */
 
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0;
+}
 
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/*Navbar*/
+#navbar {
+  width: 300px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-blue);
+  align-items: flex-start;
+  color: var(--color-black);
+  padding: 16px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  filter: brightness(2);
+  width: 40px;
+  height: 50px;
+}
+.logo__text {
+  color: var(--color-white);
+  margin-top: 12px;
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.navbar__menu {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  padding: 25px 0 0 10px;
+  width: 100%;
+}
+.item__list {
+  display: flex;
+  justify-content: space-between;
+}
+.item__list_lists {
+  color: var(--color-grey);
+}
+
+.item__list_lists li {
+  display: flex;
+  align-items: center;
+}
+.item__list_lists span {
+  padding-left: 10px;
+}
+.item__list_pic {
+  width: 40px;
+  height: 40px;
+}
+
+/*island*/
+.island {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 70px;
+}
+.island__container {
+  width: 900px;
+  height: 400px;
+}
+.island__title {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.island__villagers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.island__villager {
+  width: 150px;
+  margin: 10px;
+}
+.island__villager h3 {
+  text-align: center;
+}
+.island__villager div {
+  background-color: var(--color-yellow);
+  width: 100%;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.island__villager img {
+  width: 120px;
+  height: 120px;
+}
+
+/*temporary hide*/
+.hide {
+  display: none;
 }

@@ -1,162 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>ACNH</title>
-  <script defer src="main.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ACNH</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
-  <!--google icon-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
-
-</head>
-<body>
-<!--Navbar-->
-<nav id="navbar">
-  <div class="navbar__logo">
-    <img src="img/logo.png">
-    <a href="#">ACNH Book</a>
-  </div>
-  <ul class="navbar__menu">
-    <li class="navbar__menu__item" data-link="island">Island</li>
-    <li class="navbar__menu__item" data-link="#villagers">Villagers</li>
-    <li class="navbar__menu__item" data-link="#encyclopedia">Encyclopedia</li>
-    <li class="navbar__menu__item" data-link="#collection">Collection</li>
-  </ul>
-  </nav>
-<!--Island<-->
-<section id="island">
-  <div class="island__container">
-    <h1 class="island__title">
-      My Island Villagers
-    </h1>
-   <div class="island__villagers">
-     <span>name</span>
-   </div>
-  </div>
-</section>
-
-<!--Villagers-->
-<section id="villagers" class="villagers__container">
-  <h1>Villagers</h1>
-  <div class="villagers--categories">
-  <button class="villagers__btn selected" data-filter="*">
-    All
-  </button>
-  <button class="villagers__btn" data-filter="cranky">
-    Cranky
-  </button>
-  <button class="villagers__btn" data-filter="jock">
-    Jock
-  </button>
-  <button class="villagers__btn" data-filter="lazy">
-    Lazy
-  </button>
-  <button class="villagers__btn" data-filter=normal">
-    Normal
-  </button>
-  <button class="villagers__btn" data-filter="peppy">
-    Peppy
-  </button>
-  <button class="villagers__btn" data-filter="smug">
-   Smug
-  </button>
-  <button class="villagers__btn" data-filter="snooty">
-    Snooty
-  </button>
-  <button class="villagers__btn" data-filter="uchi">
-   Uchi
-  </button>
-  </div>
-
-  <div class="villager__container">
-    <div class="villager"  data-type="">
-      <img src="#"> name, gender
-    </div>
-    <div class="villager__description">
-      <img class="villager__img" src="#" alt="villager"/>
-      <h3>Name</h3>
-      <div class="villager__catch_phrase">
-        <div>wofwof</div>
-        <div class="catch_phrase_bubble"></div>
+    <!--google icon-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Open+Sans:wght@400;600;700&family=Poor+Story&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav id="navbar">
+      <div class="navbar__logo">
+        <img src="img/logo.png" class="logo" />
+        <a href="#" class="logo__text"><b>ACNH Book</b></a>
       </div>
-
-      <ul class="villager__description__specific">
-        <li class="villager__description__item" data-link="#personality">Personality</li>
-        <li class="villager__description__item" data-link="#birthday">Birthday</li>
-        <li class="villager__description__item" data-link="#species">Species</li>
-
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item" data-link="island">Island</li>
+        <li class="navbar__menu__item" data-link="#villagers">Villagers</li>
+        <li class="navbar__menu__item" data-link="#encyclopedia">
+          <div class="item__list">
+            Encyclopedia
+            <span class="material-icons">expand_less</span>
+          </div>
+          <ul class="item__list_lists">
+            <li>
+              <img src="img/bugs.png" class="item__list_pic" /><span>Bug</span>
+            </li>
+            <li>
+              <img src="img/fish.png" class="item__list_pic" /><span>Fish</span>
+            </li>
+            <li>
+              <img src="img/seaCreatures.png" class="item__list_pic" /><span
+                >Sea Creature</span
+              >
+            </li>
+            <li>
+              <img src="img/fossils.png" class="item__list_pic" /><span
+                >Fossils</span
+              >
+            </li>
+            <li>
+              <img src="img/art.png" class="item__list_pic" /><span>Art</span>
+            </li>
+          </ul>
+        </li>
+        <li class="navbar__menu__item" data-link="#collection">
+          <div class="item__list">
+            Collection
+            <span class="material-icons">expand_more</span>
+          </div>
+          <ul class="item__list_lists">
+            <li>
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Houseware</span
+              >
+            </li>
+            <li>
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Wallmount</span
+              >
+            </li>
+            <li>
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Miscellaneous</span
+              >
+            </li>
+          </ul>
+        </li>
       </ul>
-      <!--my villager btn-->
-      <span class="material-icons-outlined">home</span>
+    </nav>
+    <!--Island<-->
+    <section id="island" class="island">
+      <div class="island__container">
+        <h1 class="island__title">My Island's Villagers</h1>
+        <div class="island__villagers">
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+          <div class="island__villager">
+            <div>
+              <img src="img/art.png" />
+            </div>
+            <h3>name</h3>
+          </div>
+        </div>
       </div>
-  </div>
-</section>
+    </section>
 
-<!--encyclopedia-->
-<section id="encyclopedia" class="encyclopedia__container">
-  <ul class="encyclopedia__list">
-    <li class="encyclopedia__bugs" data-link="#bug">Bugs</li>
-    <li class="encyclopedia__fishes" data-link="#fishes">Fishes</li>
-    <li class="encyclopedia__seaCreatures" data-link="#seaCreatures">Sea Creatures</li>
-    <li class="encyclopedia__fossils" data-link="#fossils">Fossils</li>
-    <li class="encyclopedia__arts" data-link="#arts">Arts</li>
-  </ul>
+    <!--Villagers-->
+    <section id="villagers" class="villagers__container">
+      <h1>Villagers</h1>
+      <div class="villagers--categories">
+        <button class="villagers__btn selected" data-filter="*">All</button>
+        <button class="villagers__btn" data-filter="cranky">Cranky</button>
+        <button class="villagers__btn" data-filter="jock">Jock</button>
+        <button class="villagers__btn" data-filter="lazy">Lazy</button>
+        <button class="villagers__btn" data-filter="normal">Normal</button>
+        <button class="villagers__btn" data-filter="peppy">Peppy</button>
+        <button class="villagers__btn" data-filter="smug">Smug</button>
+        <button class="villagers__btn" data-filter="snooty">Snooty</button>
+        <button class="villagers__btn" data-filter="uchi">Uchi</button>
+      </div>
 
-  <div class="bugs--categories">
-    <img class="bugs__img" src="#" alt="bugs"/>
-    <h3>bug__name</h3>
-    <div class="bug__info__categories">
-      <div class="bug__info"data-link="#location">
-        <div>Location</div>
-        <div>get location</div>
-      </div>
-      <div class="bug__info"data-link="#price">
-        <div>Price</div>
-        <div>get price</div>
-      </div>
-      <div class="bug__info"data-link="#northern">
-        <div>northern</div>
-        <div>get northern month</div>
-      </div>
-      <div class="bug__info"data-link="#southern">
-        <div>southern</div>
-        <div>get southern month</div>
-      </div>
-      <div class="bug__info"data-link="#time">
-        <div>time</div>
-        <div>get time</div>
-      </div>
-    </div>
+      <div class="villager__container">
+        <div class="villager" data-type=""><img src="#" /> name, gender</div>
+        <div class="villager__description">
+          <img class="villager__img" src="#" alt="villager" />
+          <h3>Name</h3>
+          <div class="villager__catch_phrase">
+            <div>wofwof</div>
+            <div class="catch_phrase_bubble"></div>
+          </div>
 
-    </div>
-</section>
-
-<!--Collection-->
-<section id="collection" class="collection__container">
-  <ul class="collection__list">
-    <li class="collection__houseware" data-link="#houseware">Houseware</li>
-    <li class="collection__wallmount" data-link="#wallmount">Wallmount</li>
-    <li class="collection__miscellaneous" data-link="#miscellaneous">Miscellaneous</li>
-  </ul>
-
-  <div class="houseware--categories">
-    <img class="houseware__img" src="#" alt="houseware"/>
-    <h3>houseware__name</h3>
-    <div class="bug__info__categories">
-      <div class="houseware__info"data-link="#size">
-        <div>size</div>
-        <div>get size</div>
+          <ul class="villager__description__specific">
+            <li class="villager__description__item" data-link="#personality">
+              Personality
+            </li>
+            <li class="villager__description__item" data-link="#birthday">
+              Birthday
+            </li>
+            <li class="villager__description__item" data-link="#species">
+              Species
+            </li>
+          </ul>
+          <!--my villager btn-->
+          <span class="material-icons">home</span>
+        </div>
       </div>
-      <div class="houseware__info"data-link="#price">
-        <div>Price</div>
-        <div>get price</div>
+    </section>
+
+    <!--encyclopedia-->
+    <section id="encyclopedia" class="encyclopedia__container">
+      <ul class="encyclopedia__list">
+        <li class="encyclopedia__bugs" data-link="#bug">Bugs</li>
+        <li class="encyclopedia__fishes" data-link="#fish">Fish</li>
+        <li class="encyclopedia__seaCreatures" data-link="#seaCreatures">
+          Sea Creatures
+        </li>
+        <li class="encyclopedia__fossils" data-link="#fossils">Fossils</li>
+        <li class="encyclopedia__arts" data-link="#arts">Arts</li>
+      </ul>
+
+      <div class="bugs--categories">
+        <img class="bugs__img" src="#" alt="bugs" />
+        <h3>bug__name</h3>
+        <div class="bug__info__categories">
+          <div class="bug__info" data-link="#location">
+            <div>Location</div>
+            <div>get location</div>
+          </div>
+          <div class="bug__info" data-link="#price">
+            <div>Price</div>
+            <div>get price</div>
+          </div>
+          <div class="bug__info" data-link="#northern">
+            <div>northern</div>
+            <div>get northern month</div>
+          </div>
+          <div class="bug__info" data-link="#southern">
+            <div>southern</div>
+            <div>get southern month</div>
+          </div>
+          <div class="bug__info" data-link="#time">
+            <div>time</div>
+            <div>get time</div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-  </div>
+    <!--Collection-->
+    <section id="collection" class="collection__container">
+      <ul class="collection__list">
+        <li class="collection__houseware" data-link="#houseware">Houseware</li>
+        <li class="collection__wallmount" data-link="#wallmount">Wallmount</li>
+        <li class="collection__miscellaneous" data-link="#miscellaneous">
+          Miscellaneous
+        </li>
+      </ul>
 
-</section>
-</body>
+      <div class="houseware--categories">
+        <img class="houseware__img" src="#" alt="houseware" />
+        <h3>houseware__name</h3>
+        <div class="bug__info__categories">
+          <div class="houseware__info" data-link="#size">
+            <div>size</div>
+            <div>get size</div>
+          </div>
+          <div class="houseware__info" data-link="#price">
+            <div>Price</div>
+            <div>get price</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
