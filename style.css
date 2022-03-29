@@ -3,6 +3,7 @@
   /*Color*/
   --color-white: #ffffff;
   --color-dark-white: #fafafa;
+  --color-sliver: #f5f7f9;
   --color-blue: #92d1e5;
   --color-dark-blue: #79bacf;
   --color-light-blue: #c8eefa;
@@ -35,12 +36,14 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   padding-left: 300px;
   font-family: "Open Sans", sans-serif;
   margin: 0;
   cursor: default;
 }
+
 a {
   text-decoration: none;
   color: var(--color-black);
@@ -58,6 +61,14 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  justify-content: center;
+  grid-gap: 15px;
+  padding: 2.5rem 0 1rem;
 }
 
 /* Typography */
@@ -191,6 +202,229 @@ p {
   height: 120px;
 }
 
+/*Villagers*/
+.villagers__categories {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+.villagers__btn {
+  background-color: var(--color-sliver);
+  border-radius: 20px;
+  color: var(--color-black);
+  font-weight: bold;
+  font-size: medium;
+  margin-right: 5px;
+  padding: 2px 7px;
+}
+
+.villager {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 5px;
+  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0px;
+}
+.villager__honeBtn {
+  margin-left: 150px;
+  color: var(--color-light-grey);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: none;
+  border: solid 1px var(--color-light-grey);
+  cursor: pointer;
+}
+
+.villager__honeBtn:hover {
+  transform: scale(1.1);
+  transition: all ease-in 200ms;
+  color: var(--color-grey);
+}
+
+.villager img {
+  width: 50px;
+  height: 50px;
+  margin: 6px 8px;
+}
+.villager span {
+  padding: 0 4px;
+}
+.villager__container {
+  background-color: var(--color-blue);
+  border-radius: 10px;
+}
+
+.villager__description {
+  background-color: var(--color-sliver);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+.villager__description__specific {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+.villager__description__specific > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.villager__description__specific > div :first-child {
+  background-color: var(--color-blue);
+  border-radius: 5px;
+  width: 120px;
+  height: 30px;
+  margin: 4px;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 5px;
+  font-size: 16px;
+}
+.villager__description__specific > div :last-child {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  width: 180px;
+  height: 30px;
+  margin: 4px;
+  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: solid 1px var(--color-light-grey);
+}
+.villager__catch_phrase :last-child {
+  background-color: var(--color-green);
+  position: absolute;
+  top: 27px;
+  left: 236px;
+  width: 80px;
+  height: 36px;
+  border-radius: 10px;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.catch_phrase_bubble {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-green);
+  transform: rotate(27deg) skewX(5deg);
+  position: absolute;
+  top: 48px;
+  left: 233px;
+}
+
+/*encyclopedia , Collection*/
+.encyclopedia__container,
+.collection__container {
+  height: 100vh;
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
+}
+
+.encyclopedias__categories,
+.collection__categories {
+  background-color: var(--color-dark-blue);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.encyclopedias__categories h3,
+.collection__categories h3 {
+  color: var(--color-white);
+  font-size: 18px;
+  font-weight: 700;
+  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0px;
+  padding: 3px 0;
+}
+
+.encyclopedias__img,
+.collection__img {
+  background-color: var(--color-sliver);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.encyclopedias__img img,
+.collection__img img {
+  width: 90px;
+  height: 90px;
+}
+
+.encyclopedia__info__categories,
+.collection__info__categories {
+  background-color: var(--color-sliver);
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  border-radius: 5px;
+}
+.encyclopedia__info__categories > div,
+.collection__info__categories > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.encyclopedia__info__categories > div > div:first-child,
+.collection__info__categories > div > div:first-child {
+  background-color: var(--color-blue);
+  border-radius: 5px;
+  width: 120px;
+  height: 35px;
+  margin: 3px;
+  text-align: center;
+  color: var(--color-white);
+  font-weight: 600;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.encyclopedia__info__categories > div > div:last-child,
+.collection__info__categories > div > div:last-child {
+  background-color: var(--color-white);
+  border-radius: 5px;
+  width: 180px;
+  height: 35px;
+  margin: 3px;
+  font-weight: 600;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: solid 1px var(--color-light-grey);
+}
+.collection__info__categories > div > div:last-child {
+  display: flex;
+  align-items: center;
+}
+.collection__info > div > img {
+  width: 25px;
+  height: 25px;
+}
+.collection__info > div > span {
+  margin-left: 5px;
+}
 /*temporary hide*/
 .hide {
   display: none;

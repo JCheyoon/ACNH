@@ -11,7 +11,7 @@ const collection = $("#collection");
 // temporary hide
 window.addEventListener("load", function () {
   island.classList.add("hide");
+  villagers.classList.add("hide");
   encyclopedia.classList.add("hide");
-  collection.classList.add("hide");
 });
 ////////////////////////////
