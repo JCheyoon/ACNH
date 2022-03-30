@@ -42,6 +42,9 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0;
   cursor: default;
+  height: 100vh;
+  background-image: url("img/bg.png");
+  background-repeat: repeat;
 }
 
 a {
@@ -114,6 +117,8 @@ p {
   align-items: flex-start;
   color: var(--color-black);
   padding: 16px;
+  cursor: pointer;
+  z-index: 2;
 }
 
 .navbar__logo {
@@ -139,6 +144,14 @@ p {
   padding: 25px 0 0 10px;
   width: 100%;
 }
+
+.navbar__menu__item:not(.expandable):hover,
+.navbar__menu__item:not(.expandable).selected,
+.item__list:hover,
+.item__list.selected {
+  background-color: var(--color-dark-blue);
+}
+
 .item__list {
   display: flex;
   justify-content: space-between;
@@ -222,15 +235,17 @@ p {
 
 .villager {
   display: flex;
+  position: relative;
   align-items: center;
   color: var(--color-white);
   font-size: 18px;
   font-weight: 700;
   padding-right: 5px;
-  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0px;
+  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0;
 }
 .villager__honeBtn {
-  margin-left: 150px;
+  position: absolute;
+  right: 10px;
   color: var(--color-light-grey);
   width: 30px;
   height: 30px;
@@ -273,6 +288,11 @@ p {
   position: relative;
   padding: 10px;
 }
+.villager__description img {
+  width: 240px;
+  height: 240px;
+  margin: 6px 8px;
+}
 .villager__description__specific {
   display: flex;
   flex-direction: column;
@@ -312,7 +332,7 @@ p {
   position: absolute;
   top: 27px;
   left: 236px;
-  width: 80px;
+  width: 105px;
   height: 36px;
   border-radius: 10px;
   color: var(--color-white);
@@ -332,12 +352,6 @@ p {
 }
 
 /*encyclopedia , Collection*/
-.encyclopedia__container,
-.collection__container {
-  height: 100vh;
-  background-image: url("img/bg.png");
-  background-repeat: repeat;
-}
 
 .encyclopedias__categories,
 .collection__categories {
@@ -353,7 +367,7 @@ p {
   color: var(--color-white);
   font-size: 18px;
   font-weight: 700;
-  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0px;
+  text-shadow: rgb(0 0 0 / 35%) -1px 1px 0;
   padding: 3px 0;
 }
 
@@ -426,6 +440,6 @@ p {
   margin-left: 5px;
 }
 /*temporary hide*/
-.hide {
+.invisible {
   display: none;
 }

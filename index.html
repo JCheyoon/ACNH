@@ -28,14 +28,14 @@
         <a href="#" class="logo__text"><b>ACNH Book</b></a>
       </div>
       <ul class="navbar__menu">
-        <li class="navbar__menu__item" data-link="island">Island</li>
-        <li class="navbar__menu__item" data-link="#villagers">Villagers</li>
-        <li class="navbar__menu__item" data-link="#encyclopedia">
-          <div class="item__list">
+        <li class="navbar__menu__item selected" data-link="island">Island</li>
+        <li class="navbar__menu__item" data-link="villagers">Villagers</li>
+        <li class="navbar__menu__item expandable" data-link="">
+          <div class="item__list encyclopedia__nav" data-submenu="encyclopedia">
             Encyclopedia
-            <span class="material-icons">expand_less</span>
+            <span class="material-icons">expand_more</span>
           </div>
-          <ul class="item__list_lists">
+          <ul class="item__list_lists invisible">
             <li>
               <img src="img/bugs.png" class="item__list_pic" /><span>Bug</span>
             </li>
@@ -57,12 +57,12 @@
             </li>
           </ul>
         </li>
-        <li class="navbar__menu__item" data-link="#collection">
-          <div class="item__list">
+        <li class="navbar__menu__item expandable" data-link="">
+          <div class="item__list collection__nav" data-submenu="collection">
             Collection
             <span class="material-icons">expand_more</span>
           </div>
-          <ul class="item__list_lists">
+          <ul class="item__list_lists invisible">
             <li>
               <img src="img/collection.png" class="item__list_pic" /><span
                 >Houseware</span
@@ -165,54 +165,6 @@
         <button class="villagers__btn" data-filter="uchi">Uchi</button>
       </div>
       <div class="villagers__grid grid">
-        <div class="villager__container">
-          <div class="villager" data-type="">
-            <img src="img/sample_Wolfgang.png" />
-            <span>name</span><span class="material-icons"> male </span>
-            <!--my villager btn-->
-            <div class="villager__honeBtn">
-              <span class="material-icons">home</span>
-            </div>
-          </div>
-          <div class="villager__description">
-            <img
-              class="villager__img"
-              src="img/sample_Wolfgang_pic.png"
-              alt="villager"
-            />
-            <div class="villager__catch_phrase">
-              <div class="catch_phrase_bubble"></div>
-              <div>snarrrl</div>
-            </div>
-
-            <div class="villager__description__specific">
-              <!--description1-->
-              <div>
-                <div>Personality</div>
-                <div
-                  class="villager__description__item"
-                  data-link="#personality"
-                >
-                  Cranky
-                </div>
-              </div>
-              <!--description2-->
-              <div>
-                <div>Birthday</div>
-                <div class="villager__description__item" data-link="#birthday">
-                  November 25
-                </div>
-              </div>
-              <!-- description3-->
-              <div>
-                <div>Species</div>
-                <div class="villager__description__item" data-link="#species">
-                  Wolf
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
