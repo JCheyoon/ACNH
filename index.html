@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <title>ACNH</title>
-    <script defer src="main.js"></script>
+    <script type="module" defer src="helpers.js"></script>
+    <script type="module" defer src="island.js"></script>
+    <script type="module" defer src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
 
     <!--google icon-->
@@ -86,68 +88,7 @@
     <section id="island" class="island">
       <div class="island__container">
         <h1 class="island__title">My Island's Villagers</h1>
-        <div class="island__villagers">
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-          <div class="island__villager">
-            <div>
-              <img src="img/art.png" />
-            </div>
-            <h3>name</h3>
-          </div>
-        </div>
+        <div class="island__villagers"></div>
       </div>
     </section>
 
@@ -164,8 +105,14 @@
         <button class="villagers__btn" data-filter="snooty">Snooty</button>
         <button class="villagers__btn" data-filter="uchi">Uchi</button>
       </div>
-      <div class="villagers__grid grid">
-      </div>
+      <!--Toggle button-->
+      <button class="villager__toggle-btn invisible">
+        <span class="material-icons-outlined" style="font-size: 48px">
+          keyboard_arrow_up
+        </span>
+      </button>
+
+      <div class="villagers__grid grid"></div>
     </section>
 
     <!--encyclopedia-->
