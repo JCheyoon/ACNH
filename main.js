@@ -1,6 +1,8 @@
 "use strict";
-import "./villager.js";
-import {$, $$} from "./helpers.js";
+import { $, $$ } from "./helpers.js";
+import { renderIslandVillagers } from "./island.js";
+import { showVillagers } from "./villager.js";
+import { showBugs } from "./encyclopedia.js";
 
 const navbarMenu = $(".navbar__menu");
 const encyclopediaNav = $(".encyclopedia__nav");
@@ -25,11 +27,27 @@ navbarMenu.addEventListener("click", (event) => {
     }
   });
   //change active
-  const active = $(".selected")
+  const active = $(".selected");
   const target = event.target;
 
   active.classList.remove("selected");
   target.classList.add("selected");
+
+  console.log(link);
+  //rerender
+  switch (link) {
+    case "island":
+      renderIslandVillagers();
+
+      break;
+    case "villagers":
+      showVillagers();
+
+      break;
+    case "encyclopedia":
+      showBugs();
+      break;
+  }
 });
 
 const navbarItemOpen = function (nav) {

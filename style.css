@@ -17,6 +17,7 @@
   --color-dark-green: #0b8560;
   --color-light-black: #34323f;
   --color-black: #000000;
+  --color-red: red;
   /*Font size*/
   --font-large: 48px;
   --font-medium: 28px;
@@ -117,7 +118,6 @@ p {
   align-items: flex-start;
   color: var(--color-black);
   padding: 16px;
-  cursor: pointer;
   z-index: 2;
 }
 
@@ -143,6 +143,7 @@ p {
   font-weight: var(--weight-semi-bold);
   padding: 25px 0 0 10px;
   width: 100%;
+  cursor: pointer;
 }
 
 .navbar__menu__item:not(.expandable):hover,
@@ -197,6 +198,17 @@ p {
 .island__villager {
   width: 150px;
   margin: 10px;
+  position: relative;
+}
+.island__villager_removeBtn {
+  position: absolute;
+  color: var(--color-grey);
+  top: 6px;
+  right: 4px;
+}
+
+.island__villager_removeBtn:hover {
+  color: var(--color-red);
 }
 .island__villager h3 {
   text-align: center;
@@ -264,6 +276,7 @@ p {
   transition: all ease-in 200ms;
   color: var(--color-grey);
 }
+
 .homeBtn_stored {
   color: var(--color-dark-blue);
 }

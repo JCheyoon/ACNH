@@ -100,21 +100,26 @@ function myVillagerBtn() {
   homeBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const id = e.target.dataset.id ?? e.target.parentElement.dataset.id;
-      console.log(id);
       const numberId = Number(id);
       const villager = allVillagerData.find((v) => v.id === numberId);
       if (!villager) throw new Error("Villager not found!");
+
       storeVillager({
         id: villager.id,
         name: villager.name["name-EUen"],
         iconUrl: villager.icon_uri,
       });
+      if (isVillagerStored(villager.id)) {
+        const button =
+          e.target.tagName === "button" ? e.target : e.target.parentElement;
+        button.classList.add("homeBtn_stored");
+      }
     });
   });
 }
 
 //api
-export const showAcnh = async function () {
+export const showVillagers = async function () {
   try {
     const res = await fetch("https://acnhapi.com/v1a/villagers/");
     const data = await res.json();
@@ -123,21 +128,23 @@ export const showAcnh = async function () {
 
     allVillagerData = data;
     renderVillagers(data);
+    handleArrowUpBtn();
   } catch (err) {
     alert(err);
   }
 };
-showAcnh();
 
-//show arrow-up btn when scrolling down
-const arrowUp = $(".villager__toggle-btn");
+function handleArrowUpBtn() {
+  //show arrow-up btn when scrolling down
+  const arrowUp = $(".villager__toggle-btn");
 
-document.addEventListener("scroll", () => {
-  window.scrollY >= 400
-    ? arrowUp.classList.remove("invisible")
-    : arrowUp.classList.add("invisible");
-});
+  document.addEventListener("scroll", () => {
+    window.scrollY >= 400
+      ? arrowUp.classList.remove("invisible")
+      : arrowUp.classList.add("invisible");
+  });
 
-arrowUp.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  arrowUp.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}

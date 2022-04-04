@@ -5,6 +5,8 @@
     <title>ACNH</title>
     <script type="module" defer src="helpers.js"></script>
     <script type="module" defer src="island.js"></script>
+    <script type="module" defer src="villager.js"></script>
+    <script type="module" defer src="encyclopedia.js"></script>
     <script type="module" defer src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
 
@@ -27,12 +29,12 @@
     <nav id="navbar">
       <div class="navbar__logo">
         <img src="img/logo.png" class="logo" />
-        <a href="#" class="logo__text"><b>ACNH Book</b></a>
+        <div class="logo__text"><b>ACNH Book</b></div>
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item selected" data-link="island">Island</li>
         <li class="navbar__menu__item" data-link="villagers">Villagers</li>
-        <li class="navbar__menu__item expandable" data-link="">
+        <li class="navbar__menu__item expandable" data-link="encyclopedia">
           <div class="item__list encyclopedia__nav" data-submenu="encyclopedia">
             Encyclopedia
             <span class="material-icons">expand_more</span>
@@ -117,36 +119,7 @@
 
     <!--encyclopedia-->
     <section id="encyclopedia" class="encyclopedia__container">
-      <div class="encyclopedia__grid grid">
-        <div class="encyclopedias__categories">
-          <div class="encyclopedias__img">
-            <img src="img/bugs.png" alt="encyclopedias" />
-          </div>
-          <h3>bug__name</h3>
-          <div class="encyclopedia__info__categories">
-            <div class="encyclopedia__info" data-link="#location">
-              <div>Location</div>
-              <div>get location</div>
-            </div>
-            <div class="encyclopedia__info" data-link="#price">
-              <div>Price</div>
-              <div>get price</div>
-            </div>
-            <div class="encyclopedia__info" data-link="#northern">
-              <div>northern</div>
-              <div>get northern month</div>
-            </div>
-            <div class="encyclopedia__info" data-link="#southern">
-              <div>southern</div>
-              <div>get southern month</div>
-            </div>
-            <div class="encyclopedia__info" data-link="#time">
-              <div>time</div>
-              <div>get time</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="encyclopedia__grid grid"></div>
     </section>
 
     <!--Collection-->
