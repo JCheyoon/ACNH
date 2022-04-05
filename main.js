@@ -10,6 +10,8 @@ const collectionNav = $(".collection__nav");
 
 const sections = $$("section");
 
+const navbarItemLists = $$(".item__list_lists");
+const encyclopediaList = $$(".encyclopedias__list");
 ///////////////////////////
 
 //navbar
@@ -33,7 +35,6 @@ navbarMenu.addEventListener("click", (event) => {
   active.classList.remove("selected");
   target.classList.add("selected");
 
-  console.log(link);
   //rerender
   switch (link) {
     case "island":
@@ -66,3 +67,10 @@ const navbarItemOpen = function (nav) {
 
 navbarItemOpen(encyclopediaNav);
 navbarItemOpen(collectionNav);
+
+//encyclopedia list
+navbarItemLists.forEach((list) => {
+  list.addEventListener("click", function (e) {
+    console.log("test");
+  });
+});
