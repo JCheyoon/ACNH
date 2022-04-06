@@ -1,5 +1,5 @@
 "use strict";
-import { $, $$ } from "./helpers.js";
+import { $, $$, handleArrowUpBtn } from "./helpers.js";
 import { renderIslandVillagers } from "./island.js";
 import { showVillagers } from "./villager.js";
 import { showBugs } from "./bugs.js";
@@ -18,6 +18,7 @@ const collectionNav = $(".collection__nav");
 const sections = $$("section");
 
 const navbarItemLists = $$(".item__list_lists");
+const expandItemlists = $$(".expandItem__list");
 
 ///////////////////////////
 
@@ -53,6 +54,9 @@ navbarMenu.addEventListener("click", (event) => {
     case "encyclopedia":
       showBugs();
       break;
+    case "collection":
+      showHousewares();
+      break;
   }
 });
 
@@ -74,11 +78,18 @@ const navbarItemOpen = function (nav) {
 navbarItemOpen(encyclopediaNav);
 navbarItemOpen(collectionNav);
 
-//encyclopedia list
+//encyclopedia,collection list
 navbarItemLists.forEach((list) => {
   list.addEventListener("click", function (e) {
     const link = e.target.dataset.link || e.target.parentNode.dataset.link;
-    console.log(link);
+
+    expandItemlists.forEach((li) => {
+      if (link === li.id) {
+        li.classList.add("border");
+      } else {
+        li.classList.remove("border");
+      }
+    });
 
     //rerender
     switch (link) {
@@ -111,3 +122,5 @@ navbarItemLists.forEach((list) => {
     }
   });
 });
+
+handleArrowUpBtn();

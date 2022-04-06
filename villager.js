@@ -128,23 +128,7 @@ export const showVillagers = async function () {
 
     allVillagerData = data;
     renderVillagers(data);
-    handleArrowUpBtn();
   } catch (err) {
     alert(err);
   }
 };
-
-function handleArrowUpBtn() {
-  //show arrow-up btn when scrolling down
-  const arrowUp = $(".villager__toggle-btn");
-
-  document.addEventListener("scroll", () => {
-    window.scrollY >= 400
-      ? arrowUp.classList.remove("invisible")
-      : arrowUp.classList.add("invisible");
-  });
-
-  arrowUp.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}

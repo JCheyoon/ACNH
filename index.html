@@ -48,44 +48,48 @@
             <span class="material-icons">expand_more</span>
           </div>
           <ul class="item__list_lists">
-            <li class="encyclopedias__list" data-link="bugs">
-              <img src="img/bugs.png" class="item__list_pic" /><span>Bug</span>
+            <li class="expandItem__list" id="bugs" data-link="bugs">
+              <img src="img/bugs.png" class="item__list_pic" /><span>Bugs</span>
             </li>
-            <li class="encyclopedias__list" data-link="fish">
+            <li class="expandItem__list" id="fish" data-link="fish">
               <img src="img/fish.png" class="item__list_pic" /><span>Fish</span>
             </li>
-            <li class="encyclopedias__list" data-link="seaCreatures">
+            <li
+              class="expandItem__list"
+              id="seaCreatures"
+              data-link="seaCreatures"
+            >
               <img src="img/seaCreatures.png" class="item__list_pic" /><span
-                >Sea Creature</span
+                >Sea Creatures</span
               >
             </li>
-            <li class="encyclopedias__list" data-link="fossils">
+            <li class="expandItem__list" id="fossils" data-link="fossils">
               <img src="img/fossils.png" class="item__list_pic" /><span
                 >Fossils</span
               >
             </li>
-            <li class="encyclopedias__list" data-link="arts">
-              <img src="img/art.png" class="item__list_pic" /><span>Art</span>
+            <li class="expandItem__list" id="arts" data-link="arts">
+              <img src="img/art.png" class="item__list_pic" /><span>Arts</span>
             </li>
           </ul>
         </li>
-        <li class="navbar__menu__item expandable" data-link="">
+        <li class="navbar__menu__item expandable" data-link="collection">
           <div class="item__list collection__nav" data-submenu="collection">
             Collection
             <span class="material-icons">expand_more</span>
           </div>
           <ul class="item__list_lists invisible">
-            <li data-link="houseware">
+            <li class="expandItem__list" id="houseware" data-link="houseware">
               <img src="img/collection.png" class="item__list_pic" /><span
                 >Houseware</span
               >
             </li>
-            <li data-link="wallmount">
+            <li class="expandItem__list" id="wallmount" data-link="wallmount">
               <img src="img/collection.png" class="item__list_pic" /><span
                 >Wallmount</span
               >
             </li>
-            <li data-link="misc">
+            <li class="expandItem__list" id="misc" data-link="misc">
               <img src="img/collection.png" class="item__list_pic" /><span
                 >Miscellaneous</span
               >
@@ -115,12 +119,6 @@
         <button class="villagers__btn" data-filter="snooty">Snooty</button>
         <button class="villagers__btn" data-filter="uchi">Uchi</button>
       </div>
-      <!--Toggle button-->
-      <button class="villager__toggle-btn invisible">
-        <span class="material-icons-outlined" style="font-size: 48px">
-          keyboard_arrow_up
-        </span>
-      </button>
 
       <div class="villagers__grid grid"></div>
     </section>
@@ -134,5 +132,12 @@
     <section id="collection" class="collection__container">
       <div class="collection__grid grid"></div>
     </section>
+
+    <!--Arrow up Toggle button-->
+    <button class="arrowUp-btn invisible">
+      <span class="material-icons-outlined" style="font-size: 48px">
+        keyboard_arrow_up
+      </span>
+    </button>
   </body>
 </html>
