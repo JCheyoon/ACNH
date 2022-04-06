@@ -6,7 +6,15 @@
     <script type="module" defer src="helpers.js"></script>
     <script type="module" defer src="island.js"></script>
     <script type="module" defer src="villager.js"></script>
-    <script type="module" defer src="encyclopedia.js"></script>
+    <script type="module" defer src="bugs.js"></script>
+    <script type="module" defer src="fish.js"></script>
+    <script type="module" defer src="seaCreatures.js"></script>
+    <script type="module" defer src="fossils.js"></script>
+    <script type="module" defer src="arts.js"></script>
+    <script type="module" defer src="houseware.js"></script>
+    <script type="module" defer src="wallmount.js"></script>
+    <script type="module" defer src="miscellaneousc.js"></script>
+
     <script type="module" defer src="main.js"></script>
     <link rel="stylesheet" href="style.css" />
 
@@ -39,14 +47,14 @@
             Encyclopedia
             <span class="material-icons">expand_more</span>
           </div>
-          <ul class="item__list_lists invisible">
+          <ul class="item__list_lists">
             <li class="encyclopedias__list" data-link="bugs">
               <img src="img/bugs.png" class="item__list_pic" /><span>Bug</span>
             </li>
             <li class="encyclopedias__list" data-link="fish">
               <img src="img/fish.png" class="item__list_pic" /><span>Fish</span>
             </li>
-            <li class="encyclopedias__list" data-link="seaCratures">
+            <li class="encyclopedias__list" data-link="seaCreatures">
               <img src="img/seaCreatures.png" class="item__list_pic" /><span
                 >Sea Creature</span
               >
@@ -67,26 +75,20 @@
             <span class="material-icons">expand_more</span>
           </div>
           <ul class="item__list_lists invisible">
-            <li>
-              <img
-                src="img/collection.png"
-                class="item__list_pic"
-                data-link="houseware"
-              /><span>Houseware</span>
+            <li data-link="houseware">
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Houseware</span
+              >
             </li>
-            <li>
-              <img
-                src="img/collection.png"
-                class="item__list_pic"
-                data-link="wallmount"
-              /><span>Wallmount</span>
+            <li data-link="wallmount">
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Wallmount</span
+              >
             </li>
-            <li>
-              <img
-                src="img/collection.png"
-                class="item__list_pic"
-                data-link="misc"
-              /><span>Miscellaneous</span>
+            <li data-link="misc">
+              <img src="img/collection.png" class="item__list_pic" /><span
+                >Miscellaneous</span
+              >
             </li>
           </ul>
         </li>
@@ -130,29 +132,7 @@
 
     <!--Collection-->
     <section id="collection" class="collection__container">
-      <div class="collection__grid grid">
-        <div class="collection__categories">
-          <img
-            class="collection__img"
-            src="img/sample_collection.png"
-            alt="collection"
-          />
-          <h3>collection__name</h3>
-          <div class="collection__info__categories">
-            <div class="collection__info" data-link="#size">
-              <div>size</div>
-              <div>
-                <img src="img/1x1.png" alt="size" />
-                <span> 1x1</span>
-              </div>
-            </div>
-            <div class="collection__info" data-link="#price">
-              <div>Price</div>
-              <div>get price</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="collection__grid grid"></div>
     </section>
   </body>
 </html>

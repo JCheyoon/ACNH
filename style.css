@@ -458,11 +458,15 @@ p {
   padding: 5px 10px;
   font-size: 16px;
   border: solid 1px var(--color-light-grey);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .collection__info__categories > div > div:last-child {
   display: flex;
   align-items: center;
 }
+
 .collection__info > div > img {
   width: 25px;
   height: 25px;
@@ -470,6 +474,11 @@ p {
 .collection__info > div > span {
   margin-left: 5px;
 }
+
+.border {
+  border-bottom: solid 2px var(--color-dark-blue);
+}
+
 /*hide*/
 .invisible {
   display: none;

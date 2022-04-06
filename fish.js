@@ -1,18 +1,20 @@
 import { $, $$ } from "./helpers.js";
 
 const encyclopediaGrid = $(".encyclopedia__grid");
+const encyclopediaSection = $("section#encyclopedia");
 
-// variable to hold data of ALL Bugs
-let allBugData;
+// variable to hold data of ALL fishes
+let allFishData;
 
-//render bugs
-function renderBugs(data) {
+//render fish
+function renderFishes(data) {
   encyclopediaGrid.innerHTML = "";
-  data.forEach((bug) => renderBug(bug));
+  data.forEach((fish) => renderFish(fish));
+  encyclopediaSection.classList.remove("invisible");
 }
 
-//render bug
-const renderBug = function (data) {
+//render fish
+const renderFish = function (data) {
   const html = `
           <div class="encyclopedias__img">
             <img src="${data.icon_uri}" alt="encyclopedias" />
@@ -45,7 +47,10 @@ const renderBug = function (data) {
             </div>
             <div class="encyclopedia__info" data-link="#time">
               <div>time</div>
-              <div>${data.availability.time}</div>
+              <div>${
+                data.availability.time ? data.availability.time : "Every Time"
+              }
+              </div>
             </div>
           </div>
             `;
@@ -57,15 +62,15 @@ const renderBug = function (data) {
 };
 
 //api
-export const showBugs = async function () {
+export const showFish = async function () {
   try {
-    const res = await fetch("https://acnhapi.com/v1a/bugs/");
+    const res = await fetch("https://acnhapi.com/v1a/fish/");
     const data = await res.json();
 
     if (!res.ok) throw new Error(`${data.message} ({${res.status})`);
 
-    allBugData = data;
-    renderBugs(data);
+    allFishData = data;
+    renderFishes(data);
   } catch (err) {
     alert(err);
   }

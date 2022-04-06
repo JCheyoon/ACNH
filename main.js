@@ -2,7 +2,14 @@
 import { $, $$ } from "./helpers.js";
 import { renderIslandVillagers } from "./island.js";
 import { showVillagers } from "./villager.js";
-import { showBugs } from "./encyclopedia.js";
+import { showBugs } from "./bugs.js";
+import { showFish } from "./fish.js";
+import { showSeaCreatures } from "./seaCreatures.js";
+import { showFossils } from "./fossils.js";
+import { showArts } from "./arts.js";
+import { showHousewares } from "./houseware.js";
+import { showWallmount } from "./wallmount.js";
+import { showMisc } from "./miscellaneousc.js";
 
 const navbarMenu = $(".navbar__menu");
 const encyclopediaNav = $(".encyclopedia__nav");
@@ -11,16 +18,14 @@ const collectionNav = $(".collection__nav");
 const sections = $$("section");
 
 const navbarItemLists = $$(".item__list_lists");
-const encyclopediaList = $$(".encyclopedias__list");
+
 ///////////////////////////
 
 //navbar
 navbarMenu.addEventListener("click", (event) => {
   const link =
     event.target.dataset.link || event.target.parentNode.dataset.link;
-  if (link == null) {
-    return;
-  }
+
   sections.forEach((section) => {
     if (link === section.id) {
       section.classList.remove("invisible");
@@ -54,6 +59,7 @@ navbarMenu.addEventListener("click", (event) => {
 const navbarItemOpen = function (nav) {
   nav.addEventListener("click", () => {
     const navList = nav.nextElementSibling;
+
     const closed = navList.classList.contains("invisible");
     if (closed) {
       navList.classList.remove("invisible");
@@ -71,6 +77,37 @@ navbarItemOpen(collectionNav);
 //encyclopedia list
 navbarItemLists.forEach((list) => {
   list.addEventListener("click", function (e) {
-    console.log("test");
+    const link = e.target.dataset.link || e.target.parentNode.dataset.link;
+    console.log(link);
+
+    //rerender
+    switch (link) {
+      case "bugs":
+        showBugs();
+        break;
+
+      case "fish":
+        showFish();
+        break;
+
+      case "seaCreatures":
+        showSeaCreatures();
+        break;
+      case "fossils":
+        showFossils();
+        break;
+      case "arts":
+        showArts();
+        break;
+      case "houseware":
+        showHousewares();
+        break;
+      case "wallmount":
+        showWallmount();
+        break;
+      case "misc":
+        showMisc();
+        break;
+    }
   });
 });
